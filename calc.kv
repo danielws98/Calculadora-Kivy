@@ -1,0 +1,37 @@
+#:kivy 1.11.1
+<Calc_Window>:
+    orientation:'vertical'
+    canvas.before:
+        Rectangle:
+            pos:self.pos
+            size:self.size
+            source:'B1.png'
+    BoxLayout:
+        id:title
+        size_hint_y:.1
+        Label:
+            text:"Calculadora"
+            font_size:30
+            bold:True
+    
+    BoxLayout:
+        id:textinputt
+        size_hint_y:.2
+        TextInput:
+            id:inputt
+            size_hint_y:.5
+            padding:10
+            font_size:27
+            background_color:(2,2,0,0)
+            focus:True
+            foreground_color:(1.0,1.0,1.0,1.0)
+    
+    BoxLayout:
+        id:main_btn
+        size_hint_y:.7
+        padding:10
+
+        GridLayout:
+            id:numbers
+            cols:4
+            spacing:7
